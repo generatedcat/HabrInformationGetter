@@ -1,0 +1,49 @@
+﻿<Window x:Class="HabrInformationGetter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HabrInformationGetter"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="650" Width="450">
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Button Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="3" x:Name="GetHabrInfoButton" Click="GetHabrInfoButton_Click">Получить информацию</Button>
+       
+        <Label Grid.Column="0" Grid.Row="2" x:Name="labelTitle" Grid.RowSpan="2"></Label>
+        <Label Grid.Column="1" Grid.Row="2" x:Name="labeldescription" Grid.RowSpan="2" Grid.ColumnSpan="3"></Label>
+        <Label Grid.Column="4" Grid.Row="2" x:Name="labelManagingEditor" Grid.RowSpan="2"></Label>
+        <Label Grid.Column="5" Grid.Row="2" x:Name="labelGenerator" Grid.RowSpan="2"></Label>
+        <Label Grid.Column="6" Grid.Row="2" x:Name="labelPubDate" Grid.RowSpan="2"></Label>
+
+        <Button Grid.Column="1" Grid.Row="4" x:Name="previous" Click="previous_Click">previous</Button>
+        <Label Grid.Column="2" Grid.Row="4" x:Name="currentPage" FontSize="30"></Label>
+        <Label Grid.Column="3" Grid.Row="4" HorizontalAlignment="Center" FontSize="30">/</Label>
+        <Label Grid.Column="4" Grid.Row="4" x:Name="totalPages" FontSize="30"></Label>
+        <Button Grid.Column="5" Grid.Row="4" x:Name="next" Click="next_Click">next</Button>
+
+        <Border BorderThickness="1" BorderBrush="Black" Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2">
+            <TextBox Grid.Column="1" Grid.Row="6" x:Name="PathBox" Grid.ColumnSpan="2"></TextBox>
+        </Border>
+        <Button Grid.Column="4" Grid.Row="6" x:Name="SaveFile" Grid.ColumnSpan="2" Click="SaveFile_Click">Сохранить в файл</Button>
+        
+    </Grid>
+</Window>
